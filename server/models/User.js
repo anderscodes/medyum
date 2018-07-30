@@ -17,7 +17,7 @@ let UserSchema = new mongoose.Schema(
     ],
     following: [
       {
-        type: mongoose.Schema.Typers.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
       }
     ]

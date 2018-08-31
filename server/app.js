@@ -19,7 +19,7 @@ cloudinary.config({
 
 try {
   mongoose.connect(url, {
-    useMongoClient: true
+    useNewUrlParser: true
   })
 } catch (error) {
 

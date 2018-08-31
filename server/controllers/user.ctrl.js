@@ -15,13 +15,14 @@ module.exports = {
   },
   getUser: (req, res, next)=> {
     User.findById(req.params.id).then
-    .populate('following').exec((err, user)=> {
+    // .populate('following').exec
+    ((err, user)=> {
       if (err)
-        res.send(err)
+        res.sendStatus(err)
       else if (!user)
-        res.send(404)
+        res.sendStatus(404)
       else
-        res.send(user)
+        res.sendStatus(user)
         next()
     })
   },
